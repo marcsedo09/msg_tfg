@@ -1,22 +1,7 @@
 version: 2
 
 models:
-  - name: orders
-    columns:
-      - name: order_id
-        tests:
-          - unique
-          - not_null
-
-      - name: customer_name
-        tests:
-          - not_null
-          
-      - name: restaurant_id
-        tests:
-          - not_null
-
-  - name: reestaurants
+  - name: restaurants
     columns:
       - name: restaurantid
         test:
