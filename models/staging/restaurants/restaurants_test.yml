@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: restaurants
+    columns:
+      - name: restaurantid
+        tests:
+          - unique
+          - not_null
+      
+      - name: restaurantname
+        tests:
+          - not_null
+          
+      - name: cuisine
+        tests:
+          - not_null
+          
+      - name: zone
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Zone A', 'Zone B','Zone C']
+
+      - name: category
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Pro', 'Ordinary']
+              
