@@ -7,3 +7,4 @@ select
 from {{ ref("stg_orders") }}
 
 group by customer_name
+
