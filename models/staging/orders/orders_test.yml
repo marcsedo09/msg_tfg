@@ -8,6 +8,7 @@ models:
           - unique
           - not_null
 
+
       - name: customer_name
         tests:
           - not_null
@@ -15,3 +16,15 @@ models:
       - name: restaurant_id
         tests:
           - not_null
+
+  - name: dim_customers
+    columns: 
+      - name: customer_name
+        tests:
+        - unique
+        - not_null
+        - relationships:
+            to: ref('fct_orders')
+            field: customer_name
+    
+
