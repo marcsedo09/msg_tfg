@@ -38,3 +38,4 @@ models:
           - relationships:
               to: ref('fct_orders')
               field: restaurant_id
+          - dbt_constraints.primary_key

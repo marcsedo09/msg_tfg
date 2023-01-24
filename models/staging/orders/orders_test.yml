@@ -26,5 +26,6 @@ models:
         - relationships:
             to: ref('fct_orders')
             field: customer_name
+        - dbt_constraints.primary_key
     
 
