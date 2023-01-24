@@ -27,5 +27,13 @@ models:
             to: ref('fct_orders')
             field: customer_name
         - dbt_constraints.primary_key
+
+  - name: fct_orders
+    columns:
+      - name: customer_name
+        tests:
+        - dbt_constraints.foreign_key:
+            pk_table_name: ref('dim_customers')
+            pk_column_name: customer_name
     
 
